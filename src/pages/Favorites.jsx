@@ -2,7 +2,10 @@ import React from 'react'
 
 const Favorites = () => {
   return (
-    <div>Favorites</div>
+    <div>
+      <h2>No Favorites yet</h2>
+      <p>Start adding favorite movie</p>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
 import MovieCard from '../components/MovieCard'
+
 
 const Home = () => {
 
@@ -21,15 +21,18 @@ const Home = () => {
 
   }
   const searchHandler = (e)=>{
-    if(e.target.value.trim != ''){
-      setSearchQuery(e.target.value)
-
+    const value =  e.target.value;
+    if(value.trim() == ''){
+      setSearchQuery('')
+      return
     }
+    setSearchQuery(value)
   }
 
 
   return (
-    <div>
+    <div className='px-8 py-2'>
+      
       <div className='my-3'>
          <div className=' px-6 py-3 '>
         <form 
