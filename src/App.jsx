@@ -8,7 +8,7 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className='h-screen w-full bg-gray-900 '>
+    <div className='min-h-screen w-full bg-gray-900 '>
       <div className='bg-gray-800 w-full '>
         <Navbar />
       </div>

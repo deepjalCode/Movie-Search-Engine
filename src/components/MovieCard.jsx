@@ -1,17 +1,18 @@
 import React from 'react'
 
 const MovieCard = ({movie}) => {
+  console.log(movie.backdrop_path)
 
   const fovoriteMovie = ()=>{
     alert('favorite btn Clicked')
   }
 
   return (
-    <div className='bg-gray-600 max-w-58 rounded-xl text-white relative  py-2 pt-0'>
+    <div className='bg-gray-600 w-68 rounded-xl text-white relative py-2 pt-0'>
       <div>
         <img 
-          className='h-68 w-full object-cover rounded-t'   
-          src={movie.url} alt="movie.title" />
+          className='h-80 object-cover rounded-t'   
+          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path }`} alt="movie.title" />
         <div>
           <button
             onClick={fovoriteMovie}
@@ -22,8 +23,8 @@ const MovieCard = ({movie}) => {
       </div>
       
       <div>
-        <h2 className='text-xl font-bold px-2 py-1'>{movie.title}</h2>
-        <h4 className='text-sm font-medium px-2 '>{movie.releaseDate}</h4>
+        <h2 className='text-xl font-bold px-2 py-1 line-clamp-2'>{movie.title}</h2>
+        <h4 className='text-sm font-medium px-2 '>{movie.release_date}</h4>
       </div>
     </div>
   )
