@@ -22,9 +22,9 @@ const MovieCard = ({movie}) => {
         </div>
       </div>
       
-      <div>
+      <div className='flex flex-col  justify-end'>
         <h2 className='text-xl font-bold px-2 py-1 line-clamp-2'>{movie.title}</h2>
-        <h4 className='text-sm font-medium px-2 '>{movie.release_date}</h4>
+        <h4 className='text-sm font-medium px-2 '>{movie.release_date.split('-')[0]}</h4>
       </div>
     </div>
   )

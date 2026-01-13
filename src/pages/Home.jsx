@@ -30,7 +30,13 @@ const Home = () => {
     loadPopularMovies()
   }, [])
 
-
+  useEffect(()=>{
+    const userSearchMovies = async ()=>{
+      const userMovies = await searchMovies(searchQuery)
+      setMOvies(userMovies)
+    }
+    userSearchMovies()
+  },[searchQuery])
   
 
   const submitHandler = (e)=>{
